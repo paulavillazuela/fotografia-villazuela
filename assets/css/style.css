@@ -6,6 +6,10 @@ body{
     background: linear-gradient(167deg, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 51%, rgba(214,190,236,1) 100%);
 }
 
+.row{
+    margin:0;
+}
+
 header div h1 a{
     text-decoration: none;
     color: #b99ad4;
@@ -25,6 +29,14 @@ header div h2{
     font-weight: 100;
     font-size: 16px;
 }
+
+
+nav div ul li a{
+    background-color:#cab5dd;
+    border-radius: 10px;
+    margin: 5px;
+}
+
 .redes{
     list-style-type: none;
     font-size: 32px;
@@ -52,14 +64,31 @@ h4 a:hover{
     color: white;
 }
 
+.contenedor-fotos{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-portfolio{
+    position: absolute;
+    z-index: 100;
+}
+
+.contenedor-fotos:hover{
+    transform: scale(1.1);
+}
+.img-portfolio:hover{
+    filter: blur(3px);
+}
+
 .btn{
     background-color: #b99ad4;
     color: white;
     padding: 2px;
     border-radius: solid 2px;
 }
-
-
 
 #coments{
     border-radius: 5px;
@@ -71,4 +100,23 @@ h4 a:hover{
 #galeria{
     width: 100%;
     padding-bottom:20px;
+}
+
+#galeria:hover{
+    transform: scale(1.1)
+}
+
+.form-group textarea, input{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    border: solid 0.1rem #592289;
+}
+
+.form-group textarea:focus{
+    height: 150px;
+}
+
+iframe{
+    width: 100%;
 }
