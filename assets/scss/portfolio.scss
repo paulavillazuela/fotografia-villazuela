@@ -1,0 +1,29 @@
+#galeria{
+    width: 100%;
+    padding-bottom:20px;
+        
+        &:hover{
+            transform: scale(1.1)
+        }
+}
+
+.contenedor-fotos{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+}
+
+.texto-portfolio{
+    position: absolute;
+    z-index: 100;
+}
+
+.img-portfolio:hover{
+    filter: blur(3px);
+}

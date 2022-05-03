@@ -1,0 +1,31 @@
+.form-group {
+    textarea{
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0.5rem 0;
+        border: solid 0.1rem $color-secundario;
+
+        &:focus{
+            height: 150px;
+        }
+    }
+    input{
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0.5rem 0;
+        border: solid 0.1rem $color-secundario;
+    }
+}
+ 
+.btn{
+    background-color: $color-principal;
+    color: $color-blanco;
+    padding: 2px;
+    border-radius: solid 2px;
+}
+
+#coments{
+    border-radius: 5px;
+    border: 2px solid $color-secundario;
+    padding: 5px;
+}
