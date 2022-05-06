@@ -5,9 +5,9 @@
         "../scss/style.scss",
         "../scss/_variables.scss",
         "../scss/_generales.scss",
-        "../scss/portfolio.scss",
-        "../scss/comentarios.scss",
-        "../scss/contacto.scss"
+        "../scss/_portfolio.scss",
+        "../scss/_comentarios.scss",
+        "../scss/_contacto.scss"
     ],
     "names": [],
     "file": "style.css"
