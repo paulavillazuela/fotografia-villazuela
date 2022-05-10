@@ -1,31 +1,49 @@
 .form-group {
-    textarea{
-        padding: 5px;
+    input{
+        @include espacios (5px, 0.5rem 0);
         border-radius: 5px;
-        margin: 0.5rem 0;
-        border: solid 0.1rem $color-secundario;
+        border: solid 0.1rem map-get($color , secundario);
+    }
+    textarea{
+        @extend input;
 
         &:focus{
             height: 150px;
         }
     }
-    input{
-        padding: 5px;
-        border-radius: 5px;
-        margin: 0.5rem 0;
-        border: solid 0.1rem $color-secundario;
-    }
+
 }
  
 .btn{
-    background-color: $color-principal;
-    color: $color-blanco;
-    padding: 2px;
+    background-color: map-get($color , principal);
+    color: map-get($color , blanco);
+    @include espacios (2px, 0);
     border-radius: solid 2px;
+    animation-name: boton;
+    animation-duration: 1s;
+    
+}
+
+@keyframes boton{
+    0% {
+       transform: scale(0);
+    }
+    25%{
+        transform: scale(1.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 #coments{
     border-radius: 5px;
-    border: 2px solid $color-secundario;
-    padding: 5px;
+    border: 2px solid map-get($color , secundario);
+    @include espacios (5px, 0);
 }

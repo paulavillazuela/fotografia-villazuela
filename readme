@@ -1,0 +1,12 @@
+Agregue el @extend para selectores que quería que tuvieran el mismo estilo, por ejemplo en los 
+formularios, los input con los textareas.Tambien lo agregue en los selectores de titulos y subtitulos
+para que tuvieran el mismo color, fuente, etc. El map-get lo utilice para unificar en una sola variable 
+todos los colores que voy a utilizar en el sitio. Por otro lado el mixin lo generé unicamente para incluir 
+los padding y margenes, que es una de las cosas que más se repetia en los estilos que aplique, fuera de eso 
+no hubiese creido necesario usarlo, por el momento.
+
+Ademas de agregar palabras claves en la etiqueta meta (que como dijeron en clase no se utiliza tanto para
+las keyword) modifique los alt de las imagenes con palabras claves para la busqueda. 
+A su vez agregue distintos titulos para cada pagina html, haciendo referencia a la fotografía y a su vez 
+al contenido de la pagina en si.Lo mismo hice con las descripciones. En cuanto a los encabezados, dejo
+ establecido en todas las paginas el h1 y h2 con nombre y el tema de lo que trata la página.

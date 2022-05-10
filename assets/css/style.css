@@ -4,11 +4,12 @@
 }
 
 .row {
+  padding: 0;
   margin: 0;
 }
 
 body {
-  background: linear-gradient(167deg, #fbfbfb 0%, #f0f0f0 51%, #d6beec 100%);
+  background: linear-gradient(149deg, white 0%, #f0e4f6 100%);
 }
 
 header div h1 a {
@@ -32,15 +33,13 @@ header div h2 {
   font-size: 16px;
 }
 
-h3 {
+h3, h4 {
   color: #b99ad4;
   font-family: 'Noto Serif', serif;
 }
 
 h4 {
   font-size: 18px;
-  color: #b99ad4;
-  font-family: 'Noto Serif', serif;
 }
 
 h4 a {
@@ -52,13 +51,30 @@ h4 a {
 }
 
 h4 a:hover {
-  color: white;
+  color: #fff;
 }
 
 nav div ul li a {
   background-color: #cab5dd;
   border-radius: 10px;
+  padding: 0;
   margin: 5px;
+}
+
+nav div ul li .dropdown-menu {
+  background-color: #cab5dd;
+}
+
+nav div ul li .dropdown-menu .dropdown-item {
+  width: 200px;
+}
+
+nav div ul li .dropdown-menu .dropdown-item:hover {
+  background-color: #fff;
+}
+
+nav div ul li .dropdown-menu .dropdown-item:active {
+  color: black;
 }
 
 footer ul li {
@@ -67,9 +83,24 @@ footer ul li {
   display: inline-block;
 }
 
+.texto-portfolio {
+  position: absolute;
+  z-index: 100;
+}
+
+.img-portfolio {
+  transition: 1s;
+}
+
+.img-portfolio:hover {
+  filter: blur(3px);
+}
+
 #galeria {
   width: 100%;
-  padding-bottom: 20px;
+  padding: 0 0 20px 0;
+  margin: 0;
+  transition: 0.5s;
 }
 
 #galeria:hover {
@@ -81,25 +112,17 @@ footer ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.5s;
 }
 
 .contenedor-fotos:hover {
   transform: scale(1.1);
 }
 
-.texto-portfolio {
-  position: absolute;
-  z-index: 100;
-}
-
-.img-portfolio:hover {
-  filter: blur(3px);
-}
-
-.form-group textarea {
+.form-group input, .form-group textarea {
   padding: 5px;
-  border-radius: 5px;
   margin: 0.5rem 0;
+  border-radius: 5px;
   border: solid 0.1rem #592289;
 }
 
@@ -107,27 +130,47 @@ footer ul li {
   height: 150px;
 }
 
-.form-group input {
-  padding: 5px;
-  border-radius: 5px;
-  margin: 0.5rem 0;
-  border: solid 0.1rem #592289;
-}
-
 .btn {
   background-color: #b99ad4;
-  color: white;
+  color: #fff;
   padding: 2px;
+  margin: 0;
   border-radius: solid 2px;
+  animation-name: boton;
+  animation-duration: 1s;
+}
+
+@keyframes boton {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #coments {
   border-radius: 5px;
   border: 2px solid #592289;
   padding: 5px;
+  margin: 0;
 }
 
 iframe {
   width: 100%;
+}
+
+.colabo {
+  border: 3px solid #cab5dd;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

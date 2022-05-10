@@ -1,0 +1,4 @@
+@mixin espacios ($espacio-interior , $margenes) {
+    padding: $espacio-interior;
+    margin: $margenes;
+}

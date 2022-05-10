@@ -1,14 +1,13 @@
 *{
-    padding: 0;
-    margin: 0;
+    @include espacios(0,0)
 }
 
 .row{
-    margin:0;
+    @include espacios(0,0)
 }
 
 body{
-    background: linear-gradient(167deg, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 51%, rgba(214,190,236,1) 100%);
+    background: linear-gradient(149deg, rgba(255,255,255,1) 0%, rgba(240,228,246,1) 100%);;
 }
 
 header{
@@ -16,21 +15,21 @@ header{
         h1{
             a{
                 text-decoration: none;
-                color: $color-principal;
+                color:map-get($color , principal);
                 font-family: 'Noto Serif', serif;
                 font-style:italic;
                 font-weight: 300;
 
                     &:hover{
                         text-decoration: none;
-                        color: $color-secundario;
+                        color:map-get($color , secundario);
                         }
                 }
             }
         
 
         h2{
-            color: $color-principal;
+            color: map-get($color , principal);
             font-family:'BIZ UDPMincho', serif;
             text-align: center;
             font-weight: 100;
@@ -40,24 +39,23 @@ header{
 }
 
 h3{
-    color: $color-principal;
+    color: map-get($color , principal);
     font-family: 'Noto Serif', serif;
 }
 
 h4{
+    @extend h3;
     font-size: 18px;
-    color: $color-principal;
-    font-family: 'Noto Serif', serif;
 
         a{
-        color: $color-principal;
+        color: map-get($color , principal);
         font-family: 'Noto Serif', serif;
         text-decoration: none;
         background-color: black;
         border-radius:5px;
 
             &:hover{
-                color: $color-blanco;
+                color: map-get($color , blanco);
                 }
         }   
 }
@@ -67,11 +65,29 @@ nav{
         ul{
             li{
                 a{
-                    background-color:#cab5dd;
+                    background-color:map-get($color , terciario);
                     border-radius: 10px;
-                    margin: 5px;
+                    @include espacios (0,5px)
                 }
+
+            .dropdown-menu{
+                background-color:map-get($color , terciario);
+
+                .dropdown-item{
+                    width: 200px;
+
+                        &:hover{
+                            background-color: map-get($color , blanco);
+                        }
+
+                        &:active{
+                            color: black;
+                        }
+                    }
+                }
+
             }
+        
         }
     }
 }

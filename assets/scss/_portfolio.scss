@@ -1,6 +1,20 @@
+.texto-portfolio{
+    position: absolute;
+    z-index: 100;
+}
+
+.img-portfolio{
+    transition: 1s;
+}
+
+.img-portfolio:hover{
+    filter: blur(3px);
+}
+
 #galeria{
     width: 100%;
-    padding-bottom:20px;
+    @include espacios (0 0 20px 0, 0);
+    transition: 0.5s;
         
         &:hover{
             transform: scale(1.1)
@@ -12,18 +26,10 @@
     display: flex; 
     justify-content: center;
     align-items: center;
+    transition: transform 0.5s;
 
         &:hover{
             transform: scale(1.1);
         }
 
-}
-
-.texto-portfolio{
-    position: absolute;
-    z-index: 100;
-}
-
-.img-portfolio:hover{
-    filter: blur(3px);
 }
