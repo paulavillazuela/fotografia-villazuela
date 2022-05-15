@@ -51,7 +51,7 @@ h4{
         color: map-get($color , principal);
         font-family: 'Noto Serif', serif;
         text-decoration: none;
-        background-color: black;
+        background-color: map-get($color , negro) ;
         border-radius:5px;
 
             &:hover{
@@ -81,7 +81,7 @@ nav{
                         }
 
                         &:active{
-                            color: black;
+                            color: map-get($color , negro) ;
                         }
                     }
                 }

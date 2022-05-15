@@ -33,3 +33,14 @@
         }
 
 }
+
+.portfolio{
+   @include espacios (0 30px 0 30px,0);
+}
+
+.portfolio-vertical{
+    width: 50%;
+    
+}
+
+
