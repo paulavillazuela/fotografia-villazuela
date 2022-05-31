@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(149deg, white 0%, #f0e4f6 100%);
+  background-color: white;
 }
 
 header div h1 a {
@@ -18,6 +18,8 @@ header div h1 a {
   font-family: 'Noto Serif', serif;
   font-style: italic;
   font-weight: 300;
+  animation-name: slide;
+  animation-duration: 1s;
 }
 
 header div h1 a:hover {
@@ -31,6 +33,19 @@ header div h2 {
   text-align: center;
   font-weight: 100;
   font-size: 16px;
+  animation-name: slide;
+  animation-duration: 1s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 h3, h4 {
@@ -77,10 +92,24 @@ nav div ul li .dropdown-menu .dropdown-item:active {
   color: #000;
 }
 
+footer {
+  background-color: #cab5dd;
+}
+
 footer ul li {
   list-style-type: none;
   font-size: 32px;
   display: inline-block;
+}
+
+footer ul li i:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+footer .derechos {
+  border-top: solid 2px;
+  padding-top: 15px;
 }
 
 .texto-portfolio {
@@ -139,6 +168,10 @@ footer ul li {
   height: 150px;
 }
 
+.form-group .form-control {
+  width: 600px;
+}
+
 .btn {
   background-color: #b99ad4;
   color: #fff;
@@ -168,18 +201,42 @@ footer ul li {
 }
 
 #coments {
-  border-radius: 5px;
-  border: 2px solid #592289;
-  padding: 5px;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
   margin: 0;
+}
+
+label:not(.genero) {
+  display: block;
+}
+
+.box {
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px black;
+  max-width: 550px;
+}
+
+.box .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #cab5dd;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 1rem;
+}
+
+.box span {
+  font-weight: bold;
+  color: #592289;
+}
+
+.box .stars {
+  color: #592289;
 }
 
 iframe {
   width: 100%;
-}
-
-.colabo {
-  border: 3px solid #cab5dd;
-  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

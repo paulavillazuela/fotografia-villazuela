@@ -1,18 +1,22 @@
 .form-group {
-    input{
-        @include espacios (5px, 0.5rem 0);
-        border-radius: 5px;
-        border: solid 0.1rem map-get($color , secundario);
-    }
-    textarea{
-        @extend input;
-
-        &:focus{
-            height: 150px;
+        input{
+            @include espacios (5px, 0.5rem 0);
+            border-radius: 5px;
+            border: solid 0.1rem map-get($color , secundario);
         }
-    }
-
+        textarea{
+            @extend input;
+    
+            &:focus{
+                height: 150px;
+            }
+        }
+            .form-control{
+                width: 600px;
+            }
+    
 }
+
  
 .btn{
     background-color: map-get($color , principal);
@@ -43,7 +47,37 @@
 }
 
 #coments{
-    border-radius: 5px;
-    border: 2px solid map-get($color , secundario);
-    @include espacios (5px, 0);
+    border-radius: 0 0 10px 10px;
+    @include espacios (1rem, 0);
+}
+
+label:not(.genero){
+    display: block;
+}
+
+.box{
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0, 0, 0 / 10%);
+    max-width: 550px;
+    
+        .top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: map-get($color, terciario);
+            border-radius: 10px 10px 0 0;
+            padding: 0.5rem 1rem;
+        }
+
+        span{
+            font-weight: bold;
+            color: map-get($color,secundario);
+        }
+
+        .stars{
+            color:map-get($color,secundario);
+        }
+        
 }
